@@ -1,15 +1,15 @@
 Comandos SQL se dividem em duas linguagens
-
+______________________________________________________________________
 
 DDL (Data Definition Language), aqueles que definem o banco de dados
-→Create database nome
-→Drop database name
-→Create table name (Colunas)
-→Drop table name
-
+→ Create database nome
+→ Drop database name
+→ Create table name (Colunas)
+→ Drop table name
+______________________________________________________________________
 DML (Data Manipulation Language), aqueles que manipulam os dados
 → Select colunas from tabela
 → Insert into tabela (colunas) values (valores)
-→Delete from tabela
+→ Delete from tabela
 → Update colunas from tabela
 
