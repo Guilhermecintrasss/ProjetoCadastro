@@ -11,5 +11,6 @@ DML (Data Manipulation Language), aqueles que manipulam os dados
 → Select colunas from tabela
 → Insert into tabela (colunas) values (valores)
 → Delete from tabela
-→ Update colunas from tabela
-
+→ Update TABELA SET colunas
+Obs: NUNCA FAÇA UM UPDATE SEM WHERE
+→ Update TABELA SET colunas WHERE coluna = algo

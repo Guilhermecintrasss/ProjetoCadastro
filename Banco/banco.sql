@@ -9,3 +9,5 @@ email_usuario varchar(50) not null,
 fone_usuario varchar(30) null,
 senha_usuario varchar(30) not null
 );
+
+update usuario SET nome_usuario = "Zezinho", email_usuario = "ze@mail.com" where id_usuario = 1
