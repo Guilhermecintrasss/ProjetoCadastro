@@ -15,10 +15,10 @@ $sql = "INSERT INTO usuario (nome_usuario,email_usuario,fone_usuario,senha_usuar
 $sql .= "VALUES ('".$nome."','".$email."','".$fone."','".$senha."')";
 
 $result = mysqli_query($con, $sql);
-if($result)
-    echo "Dados cadastrados com sucesso";
-else
-    echo "Erro ao tentar cadastrar!";
+if($result){
+    echo "Dados cadastrados com sucesso";}
+else{
+    echo "Erro ao tentar cadastrar!";}
 
 
 /*Inserir dados
@@ -28,3 +28,4 @@ VALUES ('Cássio','(18)3622-9046','cassio@gmail','1234');
 select * from usuario;
 */
 ?>
+<a href="index.php">Voltar</a>

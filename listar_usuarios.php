@@ -16,7 +16,7 @@
         $row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta de usuários</h1>
-    <table align="center" border="1" width="500">
+    <table align="center" border="1" width="500" bgcolor="pink">
         <tr> Cabeçalho
             <th>Código</th>
             <th>Nome</th>
@@ -24,6 +24,7 @@
             <th>Telefone</th>
             <th>Senha</th>
             <th>Alterar</th>
+            <th>Excluir</th>
         </tr>
         <?php
             do{
@@ -35,6 +36,9 @@
             echo "<td>".$row['senha_usuario']."</td>";
             echo "<td><a href='altera_usuario.php?id_usuario="
             .$row['id_usuario']."'> Alterar </a> </td>"; //vai pegar o valor do id exibido 
+            echo "<td><a 
+            href='excluir_usuario.php?id_usuario=".$row['id_usuario']."'>Excluir</a>
+            </td>";
             // do while na linha atual (Como se eu pegasse o valor do contador) e usar ele
             // como condição do WHERE do banco
 

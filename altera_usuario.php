@@ -16,6 +16,8 @@
 <body>
     <h1>Cadastro de Usuários - IFSP</h1>
     <form action="altera_usuario_exe.php" method="post">
+        <input name="id_usuario" type="hidden" 
+        value="<?php echo $row['id_usuario']?>">
         <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome"
