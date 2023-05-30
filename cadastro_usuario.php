@@ -1,5 +1,16 @@
 <?php 
 include("conexao.php");
+// Upload foto
+$nome_foto = "";
+if(file_exists($_FILES['foto']['tmp_name'])){ //Checa se a pessoa escolheu foto ou não
+    $pasta_destino = 'fotos';
+$extensao = strtolower(substr($_FILES['foto']['name'],-4)); // Vai pegar apenas os ultimos 4 digitos do nome
+$nome_foto = date("Ymd-His") . $extensao; // não deixa duas fotos no mesmo nome
+move_uploaded_file($_FILES['foto']['tmp_name'],$nome_foto); //tmp_name é o nome temporario que é dado à foto
+// isso esta removendo esse nomeo ".jpg"
+}
+// fim do upload
+
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $fone = $_POST['fone'];
@@ -16,8 +27,8 @@ echo "E-mail: $email <br>";
 echo "Telefone: $fone <br>";
 echo "Senha: $senha <br>";
 
-$sql = "INSERT INTO usuario (nome_usuario,email_usuario,fone_usuario,senha_usuario)";
-$sql .= "VALUES ('".$nome."','".$email."','".$fone."','".$senha."')";
+$sql = "INSERT INTO usuario (nome_usuario,email_usuario,fone_usuario,senha_usuario,foto)";
+$sql .= "VALUES ('".$nome."','".$email."','".$fone."','".$senha."','".$nome_foto."')";
 $result = mysqli_query($con, $sql);
 
 if($result){

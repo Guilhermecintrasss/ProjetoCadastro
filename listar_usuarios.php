@@ -19,6 +19,7 @@
     <table align="center" border="1" width="500" bgcolor="pink">
         <tr> Cabeçalho
             <th>Código</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
@@ -30,6 +31,10 @@
             do{
             echo "<tr>";
             echo "<td>".$row['id_usuario']."</td>";
+            if($row['foto'] == "")
+                {echo "<td></td>";} // caso a imagem esteja vazia, vai imprimir nada
+            else
+                {echo "<td><img src='".$row['foto']."' width='80' height='100'/></td>";}
             echo "<td>".$row['nome_usuario']."</td>";
             echo "<td>".$row['email_usuario']."</td>";
             echo "<td>".$row['fone_usuario']."</td>";

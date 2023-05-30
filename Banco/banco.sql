@@ -7,7 +7,8 @@ id_usuario int(4) primary key auto_increment,
 nome_usuario varchar(50) not null,
 email_usuario varchar(50) not null,
 fone_usuario varchar(30) null,
-senha_usuario varchar(30) not null
+senha_usuario varchar(30) not null,
+foto varchar(100) null,
 );
 
 update usuario SET nome_usuario = "Zezinho", email_usuario = "ze@mail.com" where id_usuario = 1
