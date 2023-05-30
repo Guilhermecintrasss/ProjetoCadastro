@@ -41,7 +41,7 @@
         </div>
         <div>
         <label for="foto">Insira a nova foto</label>
-            <input type="file" name="foto" id="foto" accept="image/*" value="<?php$row['foto']?>"><br>
+            <input type="file" name="foto" id="foto" accept="image/*"><br>
         <input type="submit" value="Salvar">
         </div>
     </form>
