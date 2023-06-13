@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -15,18 +17,21 @@
         // mysqli_fetch_array => retorna apenas uma linha dos registros retornados
         $row = mysqli_fetch_array($result);
     ?>
+    <div class="container">
     <h1>Consulta de usuários</h1>
     <table align="center" border="1" width="500" bgcolor="pink">
+        <div class="row">
         <tr> Cabeçalho
-            <th>Código</th>
-            <th>Foto</th>
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Telefone</th>
-            <th>Senha</th>
-            <th>Alterar</th>
-            <th>Excluir</th>
+            <th class="col">Código</th>
+            <th class="col">Foto</th>
+            <th class="col">Nome</th>
+            <th class="col">E-mail</th>
+            <th class="col">Telefone</th>
+            <th class="col">Senha</th>
+            <th class="col">Alterar</th>
+            <th class="col">Excluir</th>
         </tr>
+        </div>
         <?php
             do{
             echo "<tr>";
@@ -54,5 +59,6 @@
         ?>
         <a href="index.php">Voltar</a>
     </table>
+    </div>
 </body>
 </html>
